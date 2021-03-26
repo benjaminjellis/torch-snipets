@@ -5,9 +5,9 @@ import torch
 def one_hot_label_smoothing(predictions: torch.Tensor, targets: torch.Tensor, smoothing: float = 0.1):
     """
     One-hot encode a target and smooth labels
-    :param predictions:
-    :param targets:
-    :param smoothing:
+    :param predictions: float tensor of shape [N,C]
+    :param targets: float tensor of shape [N]
+    :param smoothing: smoothing val
     :return:
     """
     n_class = predictions.shape[1]
